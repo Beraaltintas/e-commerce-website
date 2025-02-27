@@ -1,0 +1,204 @@
+.cart-page {
+  margin: 30px 30px;
+}
+.cart-page-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.cart-page .cart-form {
+  flex-basis: 60%;
+}
+/*? cart form start  */
+.cart-page .free-progress-bar {
+  border: 1px solid #dee0ea;
+  padding: 20px;
+  width: 100%;
+}
+.cart-page .progress-bar-title {
+  font-size: 12px;
+}
+.cart-page .progress-bar-title strong {
+  color: #ee403d;
+}
+.cart-page .progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #f2f3f5; /* #c5a47e */
+  border-radius: 10px;
+  margin-top: 8px;
+  position: relative;
+}
+.cart-page .progress-bar .progress {
+  background-color: #c5a47e;
+  width: 30%;
+  height: 6px;
+  border-radius: 10px;
+  position: absolute;
+  top: 0; /* Yukarı hizala */
+  left: 0; /* Başlangıcı belirle */
+}
+/*? cart form start  */
+/* !table start */
+.cart-form table img {
+  width: 60px;
+}
+.cart-form .shop-table-wrapper {
+  overflow-x: auto; /* responsive kısımda yana kaydırabilmek için */
+}
+.cart-form table > :not(caption) > * > * {
+  padding: 8px 0;
+}
+.cart-form table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 30px;
+  min-width: 595px; /* responsive kısımda yana kaydırabilmek için */
+}
+.cart-form table thead th {
+  text-align: start;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cart-form table .product-subtotal {
+  text-align: center;
+}
+.cart-form table .product-quantity {
+  text-align: center !important;
+}
+
+.cart-form table tbody {
+  border-top: 1px solid #dee0ea;
+}
+.cart-form table tbody .cart-item {
+  border-bottom: 1px solid #dee0ea;
+}
+.cart-form table tbody .cart-image {
+  position: relative;
+}
+.cart-form table tbody i {
+  position: absolute;
+  top: 2px;
+  left: -6px;
+  width: 16px;
+  height: 16px;
+  background-color: #c5a47e;
+  border-radius: 100%;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  cursor: pointer;
+}
+/* !table end */
+/* ?actions start */
+.actions-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+.actions-wrapper .coupon {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.actions-wrapper .coupon button {
+  background-color: #fff;
+  border-color: #dee0ea;
+  color: #c5a47e;
+}
+.actions-wrapper .coupon button:hover {
+  background-color: #c5a47e;
+  border-color: #c5a47e;
+  color: #fff;
+}
+.actions-wrapper .coupon input {
+  height: 100%;
+}
+.actions-wrapper .update-cart button {
+  background-color: #fff;
+  border-color: #dee0ea;
+  color: #c5a47e;
+}
+.actions-wrapper .update-cart button:hover {
+  background-color: #c5a47e;
+  border-color: #c5a47e;
+  color: #fff;
+}
+
+/* ?actions end */
+/* ? collaterals start*/
+.cart-colleterals {
+  flex: 0 0 300px; /* flex basis 300 px */
+  border: 1px solid #dee0ea;
+  padding: 30px;
+}
+.cart-colleterals table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cart-colleterals h2 {
+  font-weight: 500;
+  font-size: 16px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dee0ea;
+}
+.cart-colleterals table th,
+.cart-colleterals table td {
+  font-size: 14px;
+  font-weight: 400;
+}
+.cart-colleterals table tr:not(:last-child) {
+  border-bottom: 1px solid #dee0ea;
+}
+.cart-colleterals table th {
+  text-align: start;
+  padding: 20px 0 10px 0;
+}
+.cart-colleterals table td {
+  text-align: end;
+  padding: 20px 0 10px 0;
+}
+.cart-colleterals table ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.cart-colleterals table ul label {
+  display: inline-block;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 5px;
+}
+.cart-colleterals table ul a {
+  color: #ee403d;
+  font-weight: 500;
+}
+.cart-colleterals table strong {
+  font-size: 18px;
+  font-weight: 700;
+}
+.cart-colleterals .checkout button {
+  margin-top: 30px;
+  background-color: white;
+  border-color: #dee0ea;
+  color: #c5a47e;
+  transition: 0.3s ease all;
+}
+.cart-colleterals .checkout button:hover {
+  background-color: #c5a47e;
+  border-color: #c5a47e;
+  color: #fff;
+}
+
+/* ? collaterals end*/
+
+/*! responsive */
+@media (max-width: 992px) {
+  .cart-page-wrapper {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}

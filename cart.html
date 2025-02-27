@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>contact</title>
+    <title>cart</title>
     <link rel="stylesheet" href="css/main.css" />
     <!-- bootstrap icon cdn -->
     <link
@@ -155,7 +155,7 @@
                                 <a href="#">Cart Drawer</a>
                               </li>
                               <li>
-                                <a href="#">Crt Page</a>
+                                <a href="#">Cart Page</a>
                               </li>
                             </ul>
                           </div>
@@ -181,7 +181,7 @@
                   </li>
 
                   <li class="menu-list-item">
-                    <a href="contact.html" class="menu-link active">Contact</a>
+                    <a href="contact.html" class="menu-link">Contact</a>
                   </li>
                 </ul>
               </nav>
@@ -263,99 +263,115 @@
       </div>
     </div>
     <!-- ! Modal Search END -->
-    <!-- !contact start -->
-    <section class="contact">
+    <!--! cart start -->
+    <section class="cart-page">
       <div class="container">
-        <div class="contact-top">
-          <div class="contact-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49317.657307311565!2d29.94584153418674!3d39.41612824405948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c948171562e423%3A0x7357c4e7ede1b93c!2zS8O8dGFoeWEsIEvDvHRhaHlhIE1lcmtlei9Lw7x0YWh5YQ!5e0!3m2!1str!2str!4v1740580989616!5m2!1str!2str"
-              width="100%"
-              height="500"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
-        <div class="contact-bottom">
-          <div class="contact-titles">
-            <h4>Contact with us</h4>
-            <h2>Get In Touch</h2>
-            <p>
-              In hac habitasse platea dictumst. Pellentesque viverra sem nec
-              orci lacinia, in bibendum urna mollis. Quisque nunc lacus, varius
-              vel leo a, pretium lobortis metus. Vivamus consectetur consequat
-              justo.
-            </p>
-          </div>
-          <div class="contact-elements">
-            <form class="contact-form">
-              <div class="">
-                <label>
-                  Your name
-                  <span>* </span>
-                </label>
-                <input type="text" required />
+        <div class="cart-page-wrapper">
+          <form class="cart-form">
+            <div class="free-progress-bar">
+              <p class="progress-bar-title">
+                Add <strong>$161.00</strong> to cart and get free shipping!
+              </p>
+              <div class="progress-bar">
+                <!-- uzun çizgi -->
+                <span class="progress"></span
+                ><!-- kırmızılığı veren -->
               </div>
-              <div class="">
-                <label>
-                  Your Email
-                  <span>*</span>
-                </label>
-                <input type="text" required />
-              </div>
-              <div class="">
-                <label>
-                  Subject
-                  <span>*</span>
-                </label>
-                <input type="text" required />
-              </div>
-              <div class="">
-                <label>
-                  Your Message
-                  <span>*</span>
-                </label>
-                <textarea
-                  id="author"
-                  name="author"
-                  type="text"
-                  value=""
-                  size="30"
-                  required=""
-                ></textarea>
-              </div>
-              <button class="btn btn-sm form-button">Send Message</button>
-            </form>
-            <div class="contact-info">
-              <div class="contact-info-item">
-                <div class="contact-info-texts">
-                  <strong>Clotya Store</strong>
-                  <p class="contact-street">
-                    Clotya Store Germany — 785 15h Street, Office 478/B Green
-                    Mall Berlin, De 81566
-                  </p>
-                  <a href="tel:Phone: +1 1234 567 88">Phone: +1 1234 567 88</a>
-                  <a href="mailto:Email: contact@example.com"
-                    >Email: contact@example.com</a
-                  >
+            </div>
+            <div class="shop-table-wrapper">
+              <table class="shop-table">
+                <thead>
+                  <th class="product-thumbnail">&nbsp;</th>
+                  <!-- &nbsp htmk space code -->
+                  <th class="product-thumbnail">&nbsp;</th>
+                  <!-- &nbsp htmk space code -->
+                  <th class="product-name">Product</th>
+                  <th class="product-price">Price</th>
+                  <th class="product-quantitiy">Quantity</th>
+                  <th class="product-subtotal">Subtotal</th>
+                </thead>
+                <tbody class="cart-wrapper">
+                  <tr class="cart-item">
+                    <td></td>
+                    <td class="cart-image">
+                      <img src="img/products/product1/1.png" alt="" />
+                      <i class="bi bi-x delete-cart"></i>
+                    </td>
+                    <td>Analogue Resin Strap</td>
+                    <td>$108.00</td>
+                    <td class="product-quantitiy">1</td>
+                    <td class="product-subtotal">$108.00</td>
+                  </tr>
+                  <tr class="cart-item">
+                    <td></td>
+                    <td class="cart-image">
+                      <img src="img/products/product2/1.png" alt="" />
+                      <i class="bi bi-x delete-cart"></i>
+                    </td>
+                    <td>Ridley High Waist</td>
+                    <td>$100.00</td>
+                    <td class="product-quantitiy">1</td>
+                    <td class="product-subtotal">$100.00</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="actions-wrapper">
+                <div class="coupon">
+                  <input
+                    type="text"
+                    class="input-text"
+                    placeholder="Coupon code"
+                  />
+                  <button class="btn btn-md">Apply Coupon</button>
+                </div>
+                <div class="update-cart">
+                  <button class="btn">Update cart</button>
                 </div>
               </div>
-              <div class="contact-info-item">
-                <div class="contact-info-texts">
-                  <strong>Opening Hours</strong>
-                  <p class="contact-date">Monday - Friday : 9am - 5pm</p>
-                  <p>Weekend Closed</p>
-                </div>
+            </div>
+          </form>
+          <div class="cart-colleterals">
+            <div class="cart-totals">
+              <h2>Cart totals</h2>
+              <table>
+                <tbody>
+                  <tr class="cart-subtotal">
+                    <th>Subtotal</th>
+                    <td>
+                      <span id="subtotal">$208.00</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Shipping</th>
+                    <td>
+                      <ul>
+                        <li>
+                          <label for="">Fast Cargo: $15.00</label>
+                          <input type="checkbox" />
+                        </li>
+                        <li>
+                          <a href="#">Change Address</a>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Total</th>
+                    <td>
+                      <strong>$223.00 </strong>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="checkout">
+                <button class="btn btn-lg">Proceed to checkout</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- !contact end -->
+    <!--! cart end -->
 
     <!-- !policy start -->
     <section class="policy">
