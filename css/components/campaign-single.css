@@ -1,0 +1,41 @@
+.campaign-single{
+    margin-bottom: 30px;
+
+}
+.campaign-single .container{
+    margin-top: 40px;
+    background-image: url(../../img/single-campaign.png);
+    background-attachment: fixed;/* resim sabit kaldı aşağı kaydıkça */
+
+}
+.campaign-single .campaign-wrapper{
+    padding: 140px 15px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.campaign-single .campaign-wrapper h2{
+font-size: 25px;
+}
+.campaign-single .campaign-wrapper strong{
+font-size: 55px;
+font-weight: 600;
+margin: 20px 0;
+}
+.campaign-single .campaign-wrapper span{
+display: inline-block;
+width: 50px;
+height: 5px;
+background-color: #fff;
+}
+.campaign-single .campaign-wrapper > a{
+margin-top: 60px;
+background-color: #fff;
+transition: .3s ease color;
+}
+.campaign-single .campaign-wrapper > a:hover{
+background-color: #c5a47e;
+color: #fff;
+border-color: #c5a47e;
+}

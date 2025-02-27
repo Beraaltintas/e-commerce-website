@@ -1,0 +1,133 @@
+/*! base css start */
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", serif;
+  font-family: "Jost", serif;
+}
+body {
+  overflow-x: hidden;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px; /* genişlik ayarlandı ama sağdan başladı */
+  width: 100%;
+  margin: 0 auto; /* oratya aldı */
+}
+.logo {
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+}
+button {
+  cursor: pointer; /* tıklanabilir imleç */
+  border: none;
+}
+.btn {
+  display: inline-block;
+  line-height: 40px; /* yukarı aşağı 40px */
+  padding: 0 25px; /* yukarı aşağı 0 sağ sol 25px */
+  border: 1px solid #000;
+  font-weight: 500;
+  transition: 0.2s ease all;
+}
+.btn-sm {
+  line-height: 33px;
+}
+.btn-sm:hover {
+  background-color: #c5a47e;
+  color: #fff;
+  border-color: #dee0ea;
+}
+.btn-lg {
+  line-height: 45px;
+}
+.btn-primary {
+  background-color: #c5a47e;
+  color: #fff;
+  border-color: #dee0ea;
+}
+.btn-primary:hover {
+  background-color: #fff;
+  color: #c5a47e;
+}
+textarea {
+  overflow: auto;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+textarea {
+  outline: none; /* tıklanınca dışta oluşan çizgi gider */
+  border: 1px solid #dee0ea;
+  padding: 8px 8px 8px 15px;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: gray;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  opacity: 1;
+}
+.img-fluid {
+  width: 100%;
+}
+/*! Base end */
+
+/*? responsive */
+
+@media (max-width: 1200px) {
+  /* ekaran küçüldükçe max-width azaltarak görüntü koruma */
+  .container {
+    max-width: 992px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 576px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 400px;
+  }
+}
+@media (max-width: 400px) {
+  .container {
+    max-width: 350px;
+  }
+}
+/*? responsive */

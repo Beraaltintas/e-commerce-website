@@ -1,0 +1,254 @@
+/*! header start */
+header {
+  border-bottom: 1px solid #dee0ea;
+  position: relative;
+}
+
+.global-notification {
+  background-color: #c5a47e;
+  padding: 14px 0;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+}
+
+.global-notification a {
+  color: white;
+  font-weight: 600;
+}
+
+.header-row {
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.header-wrapper {
+  display: flex; /* nesneleri yan yana yaptı */
+  justify-content: space-between; /* nesneleri sağa ortaya sola geçirdi */
+  align-items: center; /* uzunlukta ortayaa getirdi */
+}
+
+.header-mobile {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+.header-center .bi-x-lg {
+  display: none;
+}
+
+.header-center .navigation .menu-list {
+  display: flex;
+  column-gap: 30px; /* elemanlrı birbirinden 30px uzaklaştırdı tek tek margin vererekte uzaklaşabilirdi */
+  align-items: center;
+  position: relative;
+}
+
+.header-center .menu-list .menu-list-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 90px;
+}
+
+.header-center .menu-list .menu-link {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.2px; /* harfler arası boşluk açtı */
+  position: relative;
+}
+
+.header-center .menu-list .menu-link::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #c5a47e;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translate(-50%);
+  transition: 0.2s ease width;
+}
+
+.header-center .menu-list .menu-list-item:hover .menu-link::after {
+  width: 100%;
+}
+
+.header-center .menu-list .menu-link.active::after {
+  width: 100%;
+}
+
+.header-center .menu-list i {
+  font-size: 12px;
+}
+
+.header-right .header-right-links {
+  display: flex;
+  column-gap: 16px;
+  align-items: center;
+}
+
+.header-right .bi-person {
+  font-size: 23px;
+}
+
+.header-right .toggle-button {
+  border: none;
+  background-color: transparent;
+}
+.header-right i {
+  font-size: 18px;
+  display: flex;
+}
+
+.header-right .header-cart {
+  position: relative;
+}
+.header-right .header-cart-link .header-cart-count {
+  width: 16px;
+  height: 16px;
+  background-color: #c5a47e;
+  color: white;
+  font-size: 10px;
+  border-radius: 100%; /* yuvarlak yaptı sepet üstündekini */
+  position: absolute;
+  top: -11px;
+  right: -11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+/* ? MENU DROPDOWN START */
+header .menu-dropdown-wrapper {
+  position: absolute;
+  top: 100%;
+  left: -30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+header .menu-dropdown-content {
+  width: 220px;
+  background-color: #fff;
+  border: 1px solid #dee0ea;
+  display: flex; /* yan yana yaaptı */
+  flex-direction: column; /* alt alta yaptı */
+  padding: 18px 0;
+}
+header .menu-dropdown-content a {
+  display: flex;
+  padding: 4px 30px;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+header .menu-dropdown-content a:hover {
+  color: #c5a47e;
+  font-size: 14.5px;
+}
+.header-center .menu-list .menu-list-item:hover .menu-dropdown-wrapper {
+  opacity: 1;
+  visibility: visible;
+}
+
+.megamenu-wrapper {
+  position: relative; /* Menü elemanlarını referans noktası olarak al */
+}
+.megamenu-wrapper .megamenu-links {
+  display: flex; /* elemanlar yan yana geldi */
+  column-gap: 50px;
+}
+.megamenu-wrapper .megamenu-products-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.megamenu-wrapper .megamenu-menu-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+}
+.megamenu-wrapper .megamenu-menu-list a {
+  font-size: 14px;
+}
+.megamenu-wrapper .megamenu-menu-list a:hover {
+  color: #c5a47e;
+}
+.megamenu-wrapper .megamenu-single-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+.megamenu-wrapper .megamenu-single-subtitle {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+.megamenu-wrapper .megamenu-single-button {
+  margin-top: 5px;
+}
+
+.megamenu-wrapper .menu-dropdown-wrapper {
+  position: absolute; /* Sayfanın akışını bozmayacak */
+  top: 100%; /* Menü linkinin altına yerleştir */
+  left: 50%; /* Sayfanın tam ortasına konumlandır */
+  transform: translateX(-50%); /* Ortalamayı tam sağlamak için sola kaydır */
+  width: max-content; /* İçeriğe göre genişlik ayarla */
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid #dee0ea;
+  padding: 10px;
+  z-index: 100; /* Menünün diğer öğelerin üstünde kalmasını sağla */
+}
+
+.menu-dropdown-megamenu {
+  display: flex;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* ? MENU DROPDOWN END */
+
+/*! header end */
+/* ?responsive */
+/* ! Header responsive (mobile) start */
+@media (max-width: 650px) {
+  .header-center {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    background-color: #fff;
+    border-right: 1px solid #dee0ea;
+  }
+  .header-center .bi-x-lg {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .header-center .menu-list {
+    flex-direction: column;
+    padding: 50px 75px;
+  }
+  .header-mobile {
+    display: inline-block; /* yukarıda ddisply none burda ekran küçülünce var oldu */
+  }
+  header .menu-dropdown-wrapper {
+    display: none !important;
+  }
+  header .menu-list i {
+    display: none;
+  }
+  header .menu-list-item a {
+    font-size: 16px !important;
+  }
+}
+/* ! Header responsive (mobile) end */
+/* ?responsive */

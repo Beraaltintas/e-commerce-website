@@ -1,0 +1,19 @@
+.campaigns .campaign-item {
+  padding: 75px 35px;
+  background-size: cover;
+  background-position: center;
+  flex: 1; /* 2 itemi eşitledi */
+}
+.campaigns .campaign-item .campaign-title {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #fff;
+}
+.campaigns .campaign-item .campaign-desc {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+}
