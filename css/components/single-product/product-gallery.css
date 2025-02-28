@@ -1,0 +1,27 @@
+.single-product .product-gallery {
+    width: 50%;
+    padding-right: 15px;
+}
+.single-product .product-gallery img{
+    width: 100%;
+}
+.single-product .single-image-wrapper img{
+    cursor: zoom-in;
+}
+.single-product .gallery-thumbs{
+    display: flex;
+    column-gap: 10px;
+}
+.single-product .gallery-thumbs li{
+    cursor: pointer;
+    display: flex;
+}
+.single-product .gallery-thumbs li img{
+    border: 1px solid transparent;
+}
+.single-product .gallery-thumbs li img.active{
+    border: 1px solid #dee0ea;
+}
+.single-product .gallery-thumbs li img:hover{
+    border: 1px solid #dee0ea;
+}
