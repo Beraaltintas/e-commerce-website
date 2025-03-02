@@ -5,6 +5,8 @@
 .section-title h2 {
   font-size: 32px;
   font-weight: 600;
+  line-height: 0.8;
+  margin-bottom: 4px;
 }
 
 /* !categories start */
@@ -64,7 +66,7 @@
   margin-bottom: 30px;
 }
 .blogs .blog-list {
-  display: flex; /* yanyana geldi */
+  display: grid; /* yanyana geldi */
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
 }

@@ -13,6 +13,7 @@
 @import url(components/single-product/product-gallery.css);
 @import url(components/single-product/product-info.css);
 @import url(components/single-product/product-tabs.css);
+@import url(components/reviews.css);
 /* ! Layout */
 @import url(layout/header.css);
 @import url(layout/footer.css);
@@ -22,3 +23,4 @@
 @import url(pages/account.css);
 @import url(pages/cart.css);
 @import url(pages/single-product.css);
+@import url(pages/blog.css);
