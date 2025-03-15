@@ -83,7 +83,7 @@
   background-color: #c5a47e;
   border-radius: 100%;
 }
-.slider .slider-dots .slider-dot.active{
+.slider .slider-dots .slider-dot.active {
   opacity: 1;
 }
 .fade {
