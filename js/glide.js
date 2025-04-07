@@ -5,7 +5,7 @@ export function product1(){
     gap: 20,
     /* autoplay:3000 */
     breakpoints: {
-      /* responsive kısmı kütüğhaneli slider */
+      /* responsive kısmı kütüphaneli slider */
       992: {
         perView: 3,
       },

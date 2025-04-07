@@ -1,12 +1,12 @@
 import { product1 } from "./glide.js";
-function productsFunc() {
-  const products = localStorage.getItem("products")
+
+function arrivalsFunc() {
+  const arrivals = localStorage.getItem("products")
     ? JSON.parse(localStorage.getItem("products"))
     : [];
-  const productsContainer = document.getElementById("product-list");
-
-  let resaults = "";
-  products.forEach((item) => {
+  const arrivalContainer = document.getElementById("arrivals-list");
+  let resaults = [];
+  arrivals.forEach((item) => {
     resaults += `              
     <li class="product-item glide__slide">
         <div class="product-image">
@@ -60,8 +60,9 @@ function productsFunc() {
             </div>
         </div>
     </li>`;
-    productsContainer.innerHTML = resaults;
+    
   });
+  arrivalContainer.innerHTML = resaults;
   product1();
 }
-export default productsFunc();
+export default arrivalsFunc();

@@ -1,6 +1,7 @@
 
 import headerFunc from "./header.js";
 import productsFunc from "./products.js"
+import arrivalsFunc from "./arrivals.js"
 
 
 
@@ -22,5 +23,6 @@ async function getData() {
 }
 getData();
 const products = localStorage.getItem("products");
+
 console.log(JSON.parse(products));
 
