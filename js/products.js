@@ -1,6 +1,35 @@
 import { product1 } from "./glide.js";
+let products = [];
+let cart = [];
+cart = localStorage.getItem("cart")
+  ? JSON.parse(localStorage.getItem("cart"))
+  : [];
+function addToCart() {
+  const cartItems = document.querySelector(".header-cart-count");
+  const buttons = [...document.getElementsByClassName("add-to-cart")];
+  buttons.forEach((button) => {
+    const inCart = cart.find((item) => item.id === Number(button.dataset.id));
+    if (inCart) {
+      button.setAttribute("disabled", "disabled");
+    } else {
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
+        const id = e.target.dataset.id;
+        const findProduct = products.find(
+          (product) => product.id === Number(id)
+        );
+
+        cart.push({ ...findProduct, quantity: 1 });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        button.setAttribute("disabled", "disabled");
+        cartItems.innerHTML = cart.length;
+      });
+    }
+  });
+}
+
 function productsFunc() {
-  const products = localStorage.getItem("products")
+  products = localStorage.getItem("products")
     ? JSON.parse(localStorage.getItem("products"))
     : [];
   const productsContainer = document.getElementById("product-list");
@@ -43,17 +72,19 @@ function productsFunc() {
             </li>
             </ul>
             <div class="product-prices">
-            <strong class="new-price">$${item.price.newPrice.toFixed(2)}</strong>
+            <strong class="new-price">$${item.price.newPrice.toFixed(
+              2
+            )}</strong>
             <span class="old-price">$${item.price.oldPrice.toFixed(2)}</span
             ><!-- s etiketi direkt çizer ama csste çizcez -->
             </div>
             <div class="product-discount">-${item.discount}%</div>
             <div class="product-links">
-            <button>
+            <button class="add-to-cart" data-id=${item.id}>
                 <i class="bi bi-basket-fill"></i>
             </button>
             <button>
-                <i class="bi bi-heart-fill"></i>
+            <i class="bi bi-heart-fill"></i>
             </button>
             <a href="#"><i class="bi bi-eye"></i></a>
             <a href="#"><i class="bi bi-share-fill"></i></a>
@@ -61,7 +92,8 @@ function productsFunc() {
         </div>
     </li>`;
     productsContainer.innerHTML = resaults;
+    addToCart();
   });
   product1();
 }
-export default productsFunc();
+export default productsFunc;
