@@ -47,6 +47,10 @@ button {
   cursor: pointer; /* tıklanabilir imleç */
   border: none;
 }
+button:disabled{
+  opacity: 0.4;
+  cursor: no-drop;
+}
 .btn {
   display: inline-block;
   line-height: 40px; /* yukarı aşağı 40px */

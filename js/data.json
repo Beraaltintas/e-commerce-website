@@ -21,7 +21,7 @@
         "name": "Ridley High Waist",
         "price": {
             "oldPrice": 165.00,
-            "newPrice": 208.00
+            "newPrice": 100.00
         },
         "discount": 31,
         "img": {
@@ -38,7 +38,7 @@
         "name": "Blush Beanie",
         "price": {
             "oldPrice": 165.00,
-            "newPrice": 38.00
+            "newPrice": 121.00
         },
         "discount": 90,
         "img": {
@@ -55,7 +55,7 @@
         "name": "Mercury Tee",
         "price": {
             "oldPrice": 165.00,
-            "newPrice": 48.00
+            "newPrice": 99.00
         },
         "discount": 40,
         "img": {
@@ -72,7 +72,7 @@
         "name": "La Bohème Rose Gold",
         "price": {
             "oldPrice": 165.00,
-            "newPrice": 48.00
+            "newPrice": 162.99
         },
         "discount": 40,
         "img": {

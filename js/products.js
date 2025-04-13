@@ -1,9 +1,14 @@
 import { product1 } from "./glide.js";
-let products = [];
-let cart = [];
-cart = localStorage.getItem("cart")
+let products = localStorage.getItem("products")
+  ? JSON.parse(localStorage.getItem("products"))
+  : [];
+
+let cart = localStorage.getItem("cart")
   ? JSON.parse(localStorage.getItem("cart"))
   : [];
+
+
+
 function addToCart() {
   const cartItems = document.querySelector(".header-cart-count");
   const buttons = [...document.getElementsByClassName("add-to-cart")];
@@ -27,11 +32,19 @@ function addToCart() {
     }
   });
 }
-
+function productRoute(){//ürün detay sayfasın yönlendirme.göze tıklayınca
+  const productLink = document.getElementsByClassName("product-link");
+  Array.from(productLink).forEach((button)=>{
+    button.addEventListener("click",function(e){
+      e.preventDefault();//göze tıklanınca yukarıya atmayı engeller.
+      const id =e.target.dataset.id;
+      localStorage.setItem("productId",JSON.stringify(id))
+      window.location.href = "single-product.html";//sayfaya yönlendirme.
+    })
+  })
+  
+}
 function productsFunc() {
-  products = localStorage.getItem("products")
-    ? JSON.parse(localStorage.getItem("products"))
-    : [];
   const productsContainer = document.getElementById("product-list");
 
   let resaults = "";
@@ -86,14 +99,15 @@ function productsFunc() {
             <button>
             <i class="bi bi-heart-fill"></i>
             </button>
-            <a href="#"><i class="bi bi-eye"></i></a>
+            <a href="#" class="product-link" data-id=${item.id}><i class="bi bi-eye-fill"></i></a>
             <a href="#"><i class="bi bi-share-fill"></i></a>
             </div>
         </div>
     </li>`;
-    productsContainer.innerHTML = resaults;
+    productsContainer ? (productsContainer.innerHTML = resaults) : "";
     addToCart();
   });
   product1();
+  productRoute();
 }
 export default productsFunc;

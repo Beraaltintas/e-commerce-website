@@ -4,8 +4,8 @@
 }
 
 .site-main .product-title {
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 32px;
+  font-weight: 500;
 }
 
 .site-main .product-review {
@@ -163,6 +163,11 @@
 .site-main .cart-button {
   display: flex;
   column-gap: 10px;
+}
+.site-main .cart-button button:disabled {
+  background-color: #c5a47e;
+  color: #fff;
+  border-color: #c5a47e;
 }
 
 .site-main .cart-button input {

@@ -1,5 +1,5 @@
 // arrivals.js
-import { product2 } from "./glide.js";
+import { product1 } from "./glide.js";
 
 function arrivalsFunc() {
   const arrivals = localStorage.getItem("products")
@@ -46,7 +46,7 @@ function arrivalsFunc() {
   arrivalContainer.innerHTML = results;
 
   // slider başlat
-  product2();
+  product1();
 }
 
 export default arrivalsFunc;

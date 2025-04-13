@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>e-commerce</title>
+        <!-- !glide.js cdn css -->
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css">
     <link rel="stylesheet" href="css/main.css" />
     <!-- bootstrap icon cdn -->
     <link
@@ -29,13 +33,13 @@
         <div class="container">
           <div class="header-wrapper">
             <div class="header-mobile">
-              <i class="bi bi-list"></i>
+              <i class="bi bi-list" id="btn-menu"></i>
             </div>
             <div class="header-left">
               <a href="index.html" class="logo">LOGO</a>
             </div>
 
-            <div class="header-center">
+            <div class="header-center" id="sidebar">
               <nav class="navigation">
                 <ul class="menu-list">
                   <li class="menu-list-item">
@@ -185,7 +189,7 @@
                   </li>
                 </ul>
               </nav>
-              <i class="bi-x-lg"></i>
+              <i class="bi-x-lg" id="close-sidebar"></i>
             </div>
 
             <div class="header-right">
@@ -194,7 +198,7 @@
                   <i class="bi bi-person"></i>
                 </a>
 
-                <button class="toggle-button">
+                <button class="search-button">
                   <i class="bi bi-search"></i>
                 </button>
 
@@ -259,7 +263,7 @@
             </a>
           </div>
         </div>
-        <i class="bi bi-x-lg"></i>
+        <i class="bi bi-x-lg" id="close-search"></i>
       </div>
     </div>
     <!-- ! Modal Search END -->
@@ -284,32 +288,21 @@
             <main class="site-main">
               <div class="product-gallery">
                 <div class="single-image-wrapper">
-                  <img src="img/products/product2/1.png" alt="" />
+                  <img src="img/products/product2/1.png" id="single-image" alt="" />
                 </div>
                 <div class="product-thumb">
-                  <ol class="gallery-thumbs">
-                    <li>
-                      <img
-                        src="img/products/product2/1.png"
-                        alt=""
-                        class="img-fluid active"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="img/products/product2/2.png"
-                        alt=""
-                        class="img-fluid"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="img/products/product2/3.png"
-                        alt=""
-                        class="img-fluid"
-                      />
-                    </li>
-                  </ol>
+                  <div class="glide__track" data-glide-el="track">
+                    <ol class="gallery-thumbs glide__slides">
+
+
+  
+                    </ol>
+                  </div>
+                  <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="bi bi-chevron-left"></i></button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="bi bi-chevron-right"></i></button>
+                  </div>
+
                 </div>
               </div>
               <div class="product-info">
@@ -325,8 +318,8 @@
                   <span>2 reviews</span>
                 </div>
                 <div class="product-price">
-                  <s>$208.00</s>
-                  <strong>$100.00</strong>
+                  <s class="old-price">$208.00</s>
+                  <strong class="new-price">$100.00</strong>
                 </div>
                 <div class="product-desc">
                   <p>
@@ -371,8 +364,8 @@
                         </div>
                       </div>
                       <div class="cart-button">
-                        <input type="number" value="1" min="1" />
-                        <button class="btn btn-lg btn-primary">
+                        <input type="number" value="1" min="1" id="quantity"/>
+                        <button class="btn btn-lg btn-primary" id="add-to-cart" type="button">
                           Add to Cart
                         </button>
                       </div>
@@ -419,12 +412,12 @@
           <!-- ?tab start -->
           <div class="single-tabs">
             <ul class="tab-list">
-              <li><a href="#" class="tab-button active">Description</a></li>
-              <li><a href="#" class="tab-button">Additional information</a></li>
-              <li><a href="#" class="tab-button">Reviews</a></li>
+              <li><a href="#" class="tab-button active" data-id="desc">Description</a></li>
+              <li><a href="#" class="tab-button" data-id="info">Additional information</a></li>
+              <li><a href="#" class="tab-button" data-id="reviews">Reviews</a></li>
             </ul>
             <div class="tab-panel">
-              <div class="tab-panel-desc">
+              <div class="tab-panel-desc content" id="desc">
                 <p>
                   Quisque varius diam vel metus mattis, id aliquam diam rhoncus.
                   Proin vitae magna in dui finibus malesuada et at nulla. Morbi
@@ -447,7 +440,7 @@
                   vel ornare vel, dignissim a tortor.
                 </p>
               </div>
-              <div class="tab-panel-information">
+              <div class="tab-panel-information content" id="info">
                 <h3>Additional information</h3>
                 <table>
                   <tbody>
@@ -471,7 +464,7 @@
                   </tbody>
                 </table>
               </div>
-              <div class="tab-panel-reviews">
+              <div class="tab-panel-reviews content active" id="reviews">
                 <h3>
                   2 reviews for Basic Colored Sweatpants With Elastic Hems
                 </h3>
@@ -596,18 +589,18 @@
                     </div>
                     <div class="comment-form-comment form-comment">
                       <label for="comment">Your review <span class="required ">*</span></label>
-                      <textarea id="comment" rows="10" cols="50"></textarea>
+                      <textarea id="comment-text" rows="10" cols="50" required></textarea>
                     </div>
                     <div class="comment-form-author form-comment">
                       <label for="name">Name <span class="required ">*</span></label>
-                      <input id="name" type="text">
+                      <input id="comment-name" type="text" required>
                     </div>
                     <div class="comment-form-email form-comment">
                       <label for="email">Email<span class="required ">*</span></label>
                       <input id="email" type="email">
                     </div>
                     <div class="comment-form-cookies">
-                      <input id="cookies" type="checkbox">
+                      <input id="cookies" name="cookies" type="checkbox">
                       <label for="cookies">Save my name, email, and website in this browser for the next time I comment.<span class="required ">*</span></label>
                     </div>
                     <div class="form-submit">
@@ -869,5 +862,9 @@
     </footer>
 
     <!-- ! Footer end -->
+     <script src="js/single-product.js" type="module"></script>
+     <script src="js/main.js" type="module"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+     <script src="js/glide.js" type="module"></script>
   </body>
 </html>

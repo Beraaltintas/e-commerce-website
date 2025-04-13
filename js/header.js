@@ -9,7 +9,6 @@ function sidebarFunc() {
   close_sidebar.addEventListener("click", function () {
     sidebar.style.left = "-100%";
   });
-  console.log(btnOpenSidebar);
 
   /* click outside start */
   document.addEventListener("click", function (event) {
@@ -53,8 +52,8 @@ function searchModalFunc() {
   //! search modal end
 }
 
-function headerFunc(){
-    sidebarFunc();
-    searchModalFunc();
+function headerFunc() {
+  sidebarFunc();
+  searchModalFunc();
 }
 export default headerFunc();

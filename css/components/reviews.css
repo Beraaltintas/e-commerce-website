@@ -67,6 +67,9 @@
 .tab-panel-reviews .comment-form-rating .stars a:hover i {
   color: gold;
 }
+.tab-panel-reviews .comment-form-rating .star.active i{
+  color: gold;
+}
 .tab-panel-reviews .comment-form-rating .stars a:first-child {
   padding-left: 0;
 }

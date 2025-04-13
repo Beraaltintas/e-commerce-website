@@ -29,17 +29,17 @@
         <div class="container">
           <div class="header-wrapper">
             <div class="header-mobile">
-              <i class="bi bi-list"></i>
+              <i class="bi bi-list" id="btn-menu"></i>
             </div>
             <div class="header-left">
               <a href="index.html" class="logo">LOGO</a>
             </div>
 
-            <div class="header-center">
+            <div class="header-center" id="sidebar">
               <nav class="navigation">
                 <ul class="menu-list">
                   <li class="menu-list-item">
-                    <a href="index.html" class="menu-link"
+                    <a href="index.html" class="menu-link active"
                       >Home
                       <i class="bi bi-chevron-down"></i>
                     </a>
@@ -155,7 +155,7 @@
                                 <a href="#">Cart Drawer</a>
                               </li>
                               <li>
-                                <a href="#">Cart Page</a>
+                                <a href="#">Crt Page</a>
                               </li>
                             </ul>
                           </div>
@@ -185,7 +185,7 @@
                   </li>
                 </ul>
               </nav>
-              <i class="bi-x-lg"></i>
+              <i class="bi-x-lg" id="close-sidebar"></i>
             </div>
 
             <div class="header-right">
@@ -194,7 +194,7 @@
                   <i class="bi bi-person"></i>
                 </a>
 
-                <button class="toggle-button">
+                <button class="search-button">
                   <i class="bi bi-search"></i>
                 </button>
 
@@ -259,7 +259,7 @@
             </a>
           </div>
         </div>
-        <i class="bi bi-x-lg"></i>
+        <i class="bi bi-x-lg" id="close-search"></i>
       </div>
     </div>
     <!-- ! Modal Search END -->
@@ -290,30 +290,7 @@
                   <th class="product-quantitiy">Quantity</th>
                   <th class="product-subtotal">Subtotal</th>
                 </thead>
-                <tbody class="cart-wrapper">
-                  <tr class="cart-item">
-                    <td></td>
-                    <td class="cart-image">
-                      <img src="img/products/product1/1.png" alt="" />
-                      <i class="bi bi-x delete-cart"></i>
-                    </td>
-                    <td>Analogue Resin Strap</td>
-                    <td>$108.00</td>
-                    <td class="product-quantitiy">1</td>
-                    <td class="product-subtotal">$108.00</td>
-                  </tr>
-                  <tr class="cart-item">
-                    <td></td>
-                    <td class="cart-image">
-                      <img src="img/products/product2/1.png" alt="" />
-                      <i class="bi bi-x delete-cart"></i>
-                    </td>
-                    <td>Ridley High Waist</td>
-                    <td>$100.00</td>
-                    <td class="product-quantitiy">1</td>
-                    <td class="product-subtotal">$100.00</td>
-                  </tr>
-                </tbody>
+                <tbody class="cart-wrapper"></tbody>
               </table>
               <div class="actions-wrapper">
                 <div class="coupon">
@@ -347,7 +324,7 @@
                       <ul>
                         <li>
                           <label for="">Fast Cargo: $15.00</label>
-                          <input type="checkbox" />
+                          <input type="checkbox" id="fast-cargo" />
                         </li>
                         <li>
                           <a href="#">Change Address</a>
@@ -358,7 +335,7 @@
                   <tr>
                     <th>Total</th>
                     <td>
-                      <strong>$223.00 </strong>
+                      <strong id="cart-total">$223.00 </strong>
                     </td>
                   </tr>
                 </tbody>
@@ -603,5 +580,7 @@
     </footer>
 
     <!-- ! Footer end -->
+    <script src="js/main.js" type="module"></script>
+    <script src="js/cart.js" type="module"></script>
   </body>
 </html>
