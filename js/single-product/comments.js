@@ -11,19 +11,17 @@ const commentReviewsFunc = function(){
 };
 
 const addNewCommentFunc = () =>{
-    let comments =[];
+    let comments = localStorage.getItem("comments")
+  ? JSON.parse(localStorage.getItem("comments"))
+  : [];
+
     let commentTextDOM = document.getElementById("comment-text");
     let commentText ="";
     let commentNameDOM = document.getElementById("comment-name");
     let commentName ="";
     let commentBtnDOM = document.querySelector(".form-submit input");
     let commentListDOM = document.querySelector(".comment-list");
-    // function addComment(e){
-        
-    //     console.log(e);
-        
-
-    // }
+    
     commentTextDOM.addEventListener("input",function(e){
         commentText = e.target.value;
         
@@ -34,9 +32,12 @@ const addNewCommentFunc = () =>{
         
         
     })
+    
     commentBtnDOM.addEventListener("click",function(e){
         e.preventDefault();
+        
         comments.push({text: commentText ,author: commentName});
+        
         let resault = "";
         comments.forEach((item)=>{
             resault += `
@@ -79,6 +80,7 @@ const addNewCommentFunc = () =>{
         commentListDOM.innerHTML = resault;
         commentTextDOM.value = "";
         commentNameDOM.value = "";
+        localStorage.setItem("comments", JSON.stringify(comments));
     });
     
     
