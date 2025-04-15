@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>shop</title>
+     <!-- !glide.js cdn css -->
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css">
     <link rel="stylesheet" href="css/main.css" />
     <!-- bootstrap icon cdn -->
     <link
@@ -29,13 +33,13 @@
         <div class="container">
           <div class="header-wrapper">
             <div class="header-mobile">
-              <i class="bi bi-list"></i>
+              <i class="bi bi-list" id="btn-menu"></i>
             </div>
             <div class="header-left">
               <a href="index.html" class="logo">LOGO</a>
             </div>
 
-            <div class="header-center">
+            <div class="header-center" id="sidebar">
               <nav class="navigation">
                 <ul class="menu-list">
                   <li class="menu-list-item">
@@ -77,7 +81,7 @@
                   </li>
 
                   <li class="menu-list-item megamenu-wrapper">
-                    <a href="shop.html" class="menu-link active"
+                    <a href="shop.html" class="menu-link  active"
                       >Shop
                       <i class="bi bi-chevron-down"></i>
                     </a>
@@ -185,7 +189,7 @@
                   </li>
                 </ul>
               </nav>
-              <i class="bi-x-lg"></i>
+              <i class="bi-x-lg" id="close-sidebar"></i>
             </div>
 
             <div class="header-right">
@@ -194,7 +198,7 @@
                   <i class="bi bi-person"></i>
                 </a>
 
-                <button class="toggle-button">
+                <button class="search-button">
                   <i class="bi bi-search"></i>
                 </button>
 
@@ -259,10 +263,38 @@
             </a>
           </div>
         </div>
-        <i class="bi bi-x-lg"></i>
+        <i class="bi bi-x-lg" id="close-search"></i>
       </div>
     </div>
     <!-- ! Modal Search END -->
+     <!-- !Modal dialog Start -->
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="modal-close">
+            <i class="bi bi-x"></i>
+          </button>
+          <div class="modal-image">
+            <img src="img/modal-dialog.jpg" alt="">
+          </div>
+          <div class="popup-wrapper">
+            <div class="popup-content"></div>
+              <div class="popup-title">
+                <h3>NEWSLETTER</h3>
+              </div>
+              <p class="popup-text">Sign up to our newsletter and get exclusive deals you won find any where else straight to your inbox!</p>
+              <form class="popup-form">
+                <input type="text" placeholder="Enter Email Adress Here">
+                <button class="btn btn-primary">Subscribe</button>
+                <label>
+                  <input type="checkbox">
+                  <span>Don't show this popup again</span>
+                </label>
+              </form>
+          </div>
+
+        </div>
+      </div>
+     <!-- !Modal dialog end -->
 
     <!-- !category start -->
     <section class="categories">
@@ -344,229 +376,22 @@
           <h2>Featured Products</h2>
           <p>Summer Collection New Morden Design</p>
         </div>
-        <div class="product-wrapper"></div>
-        <ul class="product-list">
-          <li class="product-item">
-            <div class="product-image">
-              <a href="#">
-                <img src="img/products/product1/1.png" alt="" class="img1" />
-                <img src="img/products/product1/2.png" alt="" class="img2" />
-              </a>
-            </div>
-            <div class="product-info">
-              <a href="#" class="product-title">Analogue Resin Strap</a>
-              <ul class="product-star">
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-half"></i>
-                </li>
-              </ul>
-              <div class="product-prices">
-                <strong class="new-price">108.88</strong>
-                <span class="old-price">$165.00</span
-                ><!-- s etiketi direkt çizer ama csste çizcez -->
-              </div>
-              <div class="product-discount">-17%</div>
-              <div class="product-links">
-                <button>
-                  <i class="bi bi-basket-fill"></i>
-                </button>
-                <button>
-                  <i class="bi bi-heart-fill"></i>
-                </button>
-                <a href="#"><i class="bi bi-eye"></i></a>
-                <a href="#"><i class="bi bi-share-fill"></i></a>
-              </div>
-            </div>
-          </li>
-          <li class="product-item">
-            <div class="product-image">
-              <a href="#">
-                <img src="img/products/product2/1.png" alt="" class="img1" />
-                <img src="img/products/product2/2.png" alt="" class="img2" />
-              </a>
-            </div>
-            <div class="product-info">
-              <a href="#" class="product-title">Analogue Resin Strap</a>
-              <ul class="product-star">
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-half"></i>
-                </li>
-              </ul>
-              <div class="product-prices">
-                <strong class="new-price">108.88</strong>
-                <span class="old-price">$165.00</span
-                ><!-- s etiketi direkt çizer ama csste çizcez -->
-              </div>
-              <div class="product-discount">-17%</div>
-              <div class="product-links">
-                <button>
-                  <i class="bi bi-basket-fill"></i>
-                </button>
-                <button>
-                  <i class="bi bi-heart-fill"></i>
-                </button>
-                <a href="#"><i class="bi bi-eye"></i></a>
-                <a href="#"><i class="bi bi-share-fill"></i></a>
-              </div>
-            </div>
-          </li>
-          <li class="product-item">
-            <div class="product-image">
-              <a href="#">
-                <img src="img/products/product3/1.png" alt="" class="img1" />
-                <img src="img/products/product3/2.png" alt="" class="img2" />
-              </a>
-            </div>
-            <div class="product-info">
-              <a href="#" class="product-title">Analogue Resin Strap</a>
-              <ul class="product-star">
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-half"></i>
-                </li>
-              </ul>
-              <div class="product-prices">
-                <strong class="new-price">108.88</strong>
-                <span class="old-price">$165.00</span
-                ><!-- s etiketi direkt çizer ama csste çizcez -->
-              </div>
-              <div class="product-discount">-17%</div>
-              <div class="product-links">
-                <button>
-                  <i class="bi bi-basket-fill"></i>
-                </button>
-                <button>
-                  <i class="bi bi-heart-fill"></i>
-                </button>
-                <a href="#"><i class="bi bi-eye"></i></a>
-                <a href="#"><i class="bi bi-share-fill"></i></a>
-              </div>
-            </div>
-          </li>
-          <li class="product-item">
-            <div class="product-image">
-              <a href="#">
-                <img src="img/products/product4/1.png" alt="" class="img1" />
-                <img src="img/products/product4/2.png" alt="" class="img2" />
-              </a>
-            </div>
-            <div class="product-info">
-              <a href="#" class="product-title">Analogue Resin Strap</a>
-              <ul class="product-star">
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-half"></i>
-                </li>
-              </ul>
-              <div class="product-prices">
-                <strong class="new-price">108.88</strong>
-                <span class="old-price">$165.00</span
-                ><!-- s etiketi direkt çizer ama csste çizcez -->
-              </div>
-              <div class="product-discount">-17%</div>
-              <div class="product-links">
-                <button>
-                  <i class="bi bi-basket-fill"></i>
-                </button>
-                <button>
-                  <i class="bi bi-heart-fill"></i>
-                </button>
-                <a href="#"><i class="bi bi-eye"></i></a>
-                <a href="#"><i class="bi bi-share-fill"></i></a>
-              </div>
-            </div>
-          </li>
-          <li class="product-item">
-            <div class="product-image">
-              <a href="#">
-                <img src="img/products/product5/1.png" alt="" class="img1" />
-                <img src="img/products/product5/2.png" alt="" class="img2" />
-              </a>
-            </div>
-            <div class="product-info">
-              <a href="#" class="product-title">Analogue Resin Strap</a>
-              <ul class="product-star">
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-half"></i>
-                </li>
-              </ul>
-              <div class="product-prices">
-                <strong class="new-price">108.88</strong>
-                <span class="old-price">$165.00</span
-                ><!-- s etiketi direkt çizer ama csste çizcez -->
-              </div>
-              <div class="product-discount">-17%</div>
-              <div class="product-links">
-                <button>
-                  <i class="bi bi-basket-fill"></i>
-                </button>
-                <button>
-                  <i class="bi bi-heart-fill"></i>
-                </button>
-                <a href="#"><i class="bi bi-eye"></i></a>
-                <a href="#"><i class="bi bi-share-fill"></i></a>
-              </div>
-            </div>
-          </li>
-        </ul>
+
+        <div class="product-wrapper product-carousel">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="product-list glide__slides" id="product-list">
+
+            </ul>
+          </div>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
     <!-- !product end -->
@@ -591,229 +416,74 @@
           <h2>New Arrivals</h2>
           <p>Summer Collection New Morden Design</p>
         </div>
-        <div class="product-wrapper"></div>
-        <ul class="product-list">
-          <li class="product-item">
-            <div class="product-image">
-              <a href="#">
-                <img src="img/products/product1/1.png" alt="" class="img1" />
-                <img src="img/products/product1/2.png" alt="" class="img2" />
-              </a>
-            </div>
-            <div class="product-info">
-              <a href="#" class="product-title">Analogue Resin Strap</a>
-              <ul class="product-star">
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-half"></i>
-                </li>
-              </ul>
-              <div class="product-prices">
-                <strong class="new-price">108.88</strong>
-                <span class="old-price">$165.00</span
-                ><!-- s etiketi direkt çizer ama csste çizcez -->
-              </div>
-              <div class="product-discount">-17%</div>
-              <div class="product-links">
-                <button>
-                  <i class="bi bi-basket-fill"></i>
-                </button>
-                <button>
-                  <i class="bi bi-heart-fill"></i>
-                </button>
-                <a href="#"><i class="bi bi-eye"></i></a>
-                <a href="#"><i class="bi bi-share-fill"></i></a>
-              </div>
-            </div>
-          </li>
-          <li class="product-item">
-            <div class="product-image">
-              <a href="#">
-                <img src="img/products/product2/1.png" alt="" class="img1" />
-                <img src="img/products/product2/2.png" alt="" class="img2" />
-              </a>
-            </div>
-            <div class="product-info">
-              <a href="#" class="product-title">Analogue Resin Strap</a>
-              <ul class="product-star">
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-half"></i>
-                </li>
-              </ul>
-              <div class="product-prices">
-                <strong class="new-price">108.88</strong>
-                <span class="old-price">$165.00</span
-                ><!-- s etiketi direkt çizer ama csste çizcez -->
-              </div>
-              <div class="product-discount">-17%</div>
-              <div class="product-links">
-                <button>
-                  <i class="bi bi-basket-fill"></i>
-                </button>
-                <button>
-                  <i class="bi bi-heart-fill"></i>
-                </button>
-                <a href="#"><i class="bi bi-eye"></i></a>
-                <a href="#"><i class="bi bi-share-fill"></i></a>
-              </div>
-            </div>
-          </li>
-          <li class="product-item">
-            <div class="product-image">
-              <a href="#">
-                <img src="img/products/product3/1.png" alt="" class="img1" />
-                <img src="img/products/product3/2.png" alt="" class="img2" />
-              </a>
-            </div>
-            <div class="product-info">
-              <a href="#" class="product-title">Analogue Resin Strap</a>
-              <ul class="product-star">
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-half"></i>
-                </li>
-              </ul>
-              <div class="product-prices">
-                <strong class="new-price">108.88</strong>
-                <span class="old-price">$165.00</span
-                ><!-- s etiketi direkt çizer ama csste çizcez -->
-              </div>
-              <div class="product-discount">-17%</div>
-              <div class="product-links">
-                <button>
-                  <i class="bi bi-basket-fill"></i>
-                </button>
-                <button>
-                  <i class="bi bi-heart-fill"></i>
-                </button>
-                <a href="#"><i class="bi bi-eye"></i></a>
-                <a href="#"><i class="bi bi-share-fill"></i></a>
-              </div>
-            </div>
-          </li>
-          <li class="product-item">
-            <div class="product-image">
-              <a href="#">
-                <img src="img/products/product4/1.png" alt="" class="img1" />
-                <img src="img/products/product4/2.png" alt="" class="img2" />
-              </a>
-            </div>
-            <div class="product-info">
-              <a href="#" class="product-title">Analogue Resin Strap</a>
-              <ul class="product-star">
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-half"></i>
-                </li>
-              </ul>
-              <div class="product-prices">
-                <strong class="new-price">108.88</strong>
-                <span class="old-price">$165.00</span
-                ><!-- s etiketi direkt çizer ama csste çizcez -->
-              </div>
-              <div class="product-discount">-17%</div>
-              <div class="product-links">
-                <button>
-                  <i class="bi bi-basket-fill"></i>
-                </button>
-                <button>
-                  <i class="bi bi-heart-fill"></i>
-                </button>
-                <a href="#"><i class="bi bi-eye"></i></a>
-                <a href="#"><i class="bi bi-share-fill"></i></a>
-              </div>
-            </div>
-          </li>
-          <li class="product-item">
-            <div class="product-image">
-              <a href="#">
-                <img src="img/products/product5/1.png" alt="" class="img1" />
-                <img src="img/products/product5/2.png" alt="" class="img2" />
-              </a>
-            </div>
-            <div class="product-info">
-              <a href="#" class="product-title">Analogue Resin Strap</a>
-              <ul class="product-star">
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-fill"></i>
-                </li>
-                <li>
-                  <i class="bi bi-star-half"></i>
-                </li>
-              </ul>
-              <div class="product-prices">
-                <strong class="new-price">108.88</strong>
-                <span class="old-price">$165.00</span
-                ><!-- s etiketi direkt çizer ama csste çizcez -->
-              </div>
-              <div class="product-discount">-17%</div>
-              <div class="product-links">
-                <button>
-                  <i class="bi bi-basket-fill"></i>
-                </button>
-                <button>
-                  <i class="bi bi-heart-fill"></i>
-                </button>
-                <a href="#"><i class="bi bi-eye"></i></a>
-                <a href="#"><i class="bi bi-share-fill"></i></a>
-              </div>
-            </div>
-          </li>
-        </ul>
+
+        <div class="glide product-wrapper product-carousel2">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="product-list glide__slides" id="arrivals-list">
+              <li class="product-item glide__slide">
+                <div class="product-image">
+                    <a href="#">
+                    <img
+                        src=""
+                        alt=""
+                        class="img1"
+                    />
+                    <img
+                        src=""
+                        alt=""
+                        class="img2"
+                    />
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="#" class="product-title"></a>
+                    <ul class="product-star">
+                    <li>
+                        <i class="bi bi-star-fill"></i>
+                    </li>
+                    <li>
+                        <i class="bi bi-star-fill"></i>
+                    </li>
+                    <li>
+                        <i class="bi bi-star-fill"></i>
+                    </li>
+                    <li>
+                        <i class="bi bi-star-fill"></i>
+                    </li>
+                    <li>
+                        <i class="bi bi-star-half"></i>
+                    </li>
+                    </ul>
+                    <div class="product-prices">
+                    <strong class="new-price"></strong>
+                    <span class="old-price"></span
+                    ><!-- s etiketi direkt çizer ama csste çizcez -->
+                    </div>
+                    <div class="product-discount">-%</div>
+                    <div class="product-links">
+                    <button>
+                        <i class="bi bi-basket-fill"></i>
+                    </button>
+                    <button>
+                        <i class="bi bi-heart-fill"></i>
+                    </button>
+                    <a href="#"><i class="bi bi-eye"></i></a>
+                    <a href="#"><i class="bi bi-share-fill"></i></a>
+                    </div>
+                </div>
+            </li>
+
+            </ul>
+          </div>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
     <!-- !arrivals end -->
@@ -921,7 +591,7 @@
           <div class="footer-widgets">
             <div class="brand-info">
               <div class="footer-logo">
-                <a href="#" class="logo">LOGO</a>
+                <a href="index.html" class="logo">LOGO</a>
               </div>
               <div class="footer-desc">
                 <p>
@@ -1050,6 +720,10 @@
     </footer>
 
     <!-- ! Footer end -->
+          <!-- javascript -->
+    <script src="js/main.js" type="module"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="js/glide.js" type="module"></script>
   </body>
 </html>
